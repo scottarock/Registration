@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'registration-app';
+  user = new User();
+  registered = false;
+
+  onSubmit() {
+    console.log('user submitted', this.user);
+    this.registered = true;
+  }
 }
